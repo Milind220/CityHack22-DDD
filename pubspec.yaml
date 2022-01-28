@@ -21,8 +21,8 @@ dependencies:
   sign_in_with_apple: 3.2.0
   crypto: 3.0.1
   provider: 6.0.1
-  # font_awesome_flutter: 9.2.0
-  # google_fonts: 2.1.0
+  font_awesome_flutter: 9.2.0  # FontAwesomeIcons gives you access to many more icons.
+  google_fonts: 2.1.0
   # rxdart: 0.27.2
   # json_annotation: 4.3.0
 
