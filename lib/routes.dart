@@ -1,6 +1,6 @@
-import 'package:sampleapp/about/about.dart';
-import 'package:sampleapp/home/home.dart';
-import 'package:sampleapp/login/login.dart';
+import 'package:sampleapp/pages/about.dart';
+import 'package:sampleapp/pages/home.dart';
+import 'package:sampleapp/pages/login.dart';
 
 var appRoutes = {
   '/': (context) => const HomeScreen(),
