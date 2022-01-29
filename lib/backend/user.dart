@@ -1,9 +1,10 @@
 import 'package:sampleapp/backend/booking.dart';
+import 'package:sampleapp/backend/recommendation_profile.dart';
 
 class User {
   // Made them potentially nullable for the anonymous user feature
-  final String? _name;
-  final String? _userId;
+  final String _name;
+  final String _userId;
   final RecommendationProfile? profile;
 
   User(
