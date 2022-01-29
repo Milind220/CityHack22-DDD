@@ -1,7 +1,7 @@
 User (uid):
 	name
 	hasProfile
-	provider
+	preferences
 
 Provider (did):
 	questions:
@@ -11,10 +11,10 @@ Provider (did):
 	address
 	hasProfile
 	providerType
-	hasVideo: bool
-	videoID: string
-	hasPicture
-	pictureID
+	hasVideo: bool   ------- Add this later
+	videoID: string   ----- Add this later
+	hasPicture       ------ Add this later
+	pictureID		------- Add this later
 	values:
 		2
 		3
