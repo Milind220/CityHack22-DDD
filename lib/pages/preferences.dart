@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:sampleapp/components/drop_down.dart';
 import 'package:sampleapp/components/page_view_tab.dart';
@@ -15,11 +13,12 @@ class PreferenceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: ListView(
+        child: PageView(
           children: [
             FirstTab(),
             ProviderTypeTab(),
             FurtherQuestionsTab(),
+            ValuesTab(),
           ],
         ),
       ),
@@ -189,8 +188,35 @@ class FurtherQuestionsTab extends StatelessWidget {
 }
 
 class ValuesTab extends StatelessWidget {
+  final values = [
+    'LGBTQ',
+    'Religion',
+    'Youth Services',
+    'Addiction',
+    'Abuse',
+    'Mental Disorder',
+    'Alternative Treatment',
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Column(
+        children: [
+          PromptText(
+              'I would prefer if my doctor has experience with or values...'),
+          Wrap(
+            children: values.map((item) {
+              return Container(
+                margin: EdgeInsets.only(left: 7.0),
+                child: Chip(
+                  label: Text(item),
+                ),
+              );
+            }).toList(),
+          )
+        ],
+      ),
+    );
   }
 }
