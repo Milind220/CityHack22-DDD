@@ -29,7 +29,7 @@ class CrisisTextBox extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   child: OutlinedButton(
                     child: Text('Make an Appointment'),
-                    onPressed: () => {Navigator.pushNamed(context, '/booking')},
+                    onPressed: () => {null},
                   )),
             ],
           ),
