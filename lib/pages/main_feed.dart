@@ -16,53 +16,24 @@ class MainFeedScreen extends StatelessWidget {
             child: Column(
               //mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                      width: 150,
-                      margin: EdgeInsets.only(bottom: 10),
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.all(5),
-                      child: Text('Resource Center',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          textAlign: TextAlign.center),
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black45,
-                              spreadRadius: 0.10,
-                              blurRadius: 2,
-                              offset: Offset(2, 3),
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(10),
-                          color: c_primaryColor),
+                      margin: EdgeInsets.only(bottom: 40, top: 15),
+                      child: OutlinedButton(
+                          onPressed: () => {
+                                Navigator.pushNamed(context, '/feed'),
+                              },
+                          child: Text('Resource Center')),
                     ),
                     Container(
-                      width: 150,
-                      margin: EdgeInsets.only(bottom: 10),
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.all(5),
-                      child: Text('Progress Tracker',
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center),
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black45,
-                              spreadRadius: 0.10,
-                              blurRadius: 2,
-                              offset: Offset(2, 3),
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(10),
-                          color: c_primaryColor),
+                      margin: EdgeInsets.only(bottom: 40, top: 15),
+                      child: OutlinedButton(
+                          onPressed: () => {
+                                Navigator.pushNamed(context, '/feed'),
+                              },
+                          child: Text('Progress Tracker')),
                     ),
                   ],
                 ),
@@ -102,6 +73,28 @@ class MainFeedScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+                Container(
+                  padding: EdgeInsets.all(15),
+                  alignment: Alignment.center,
+                  width: 300,
+                  child: Text(
+                    'Review your recent visit with Dr. Nazir',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  margin: EdgeInsets.only(bottom: 15),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.blueAccent,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.blueAccent,
+                          spreadRadius: 0.5,
+                          blurRadius: 7.5,
+                          offset: Offset(2, 3),
+                        ),
+                      ]),
+                )
               ],
             ),
           ),
