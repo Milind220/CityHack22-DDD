@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sampleapp/firebase_options.dart';
 import 'package:sampleapp/routes.dart';
 
+/// Hello Fellow Dinky Dongs
+
 // Import the firebase_core plugin
 import 'package:firebase_core/firebase_core.dart';
 
