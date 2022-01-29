@@ -1,0 +1,58 @@
+User (uid):
+	name
+	hasProfile
+	preferences
+
+Provider (did):
+	questions:
+		question
+		answer
+	name
+	address
+	hasProfile
+	providerType
+	hasVideo: bool   ------- Add this later
+	videoID: string   ----- Add this later
+	hasPicture       ------ Add this later
+	pictureID		------- Add this later
+	values:
+		2
+		3
+		1
+		7
+
+resources:
+	title
+	description
+	link
+
+
+
+
+
+user:
+	name = map['name']
+
+	profile = func(map)
+	user = User(name, RecommendationProfile)
+
+provider:
+	name = map['name']
+
+	profile = func(map)
+	user = User(name, RecommendationProfile)
+
+
+func(map){
+	if(!map['hasProfile']) return 
+
+	build RecommendationProfile;
+	return;
+}
+
+var users = CollectionReference('users');
+user.document(uid).get().collection().getAll().then(map => {
+	name = map['name'];
+
+	profile = createProfile(map);
+})
