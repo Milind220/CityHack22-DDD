@@ -1,4 +1,11 @@
 class Resource {
-  // lol idk what to do here yet.
-  //
+  final String resourceLink;
+  final String title;
+  final String description;
+
+  Resource(
+    this.resourceLink,
+    this.title,
+    this.description,
+  );
 }
