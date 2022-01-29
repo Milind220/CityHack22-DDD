@@ -74,26 +74,32 @@ class MainFeedScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(15),
-                  alignment: Alignment.center,
-                  width: 300,
-                  child: Text(
-                    'Review your recent visit with Dr. Nazir',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  width: 250,
+                  margin: EdgeInsets.symmetric(vertical: 40),
+                  child: OutlinedButton(
+                    onPressed: () => {null},
+
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      child: Text(
+                        'Review your recent visit with Dr. Nazir',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    //margin: EdgeInsets.only(bottom: 15),
                   ),
-                  margin: EdgeInsets.only(bottom: 15),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.blueAccent,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.blueAccent,
-                          spreadRadius: 0.5,
-                          blurRadius: 7.5,
-                          offset: Offset(2, 3),
-                        ),
-                      ]),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 150),
+                  child: ElevatedButton(
+                      onPressed: () =>
+                          {Navigator.pushNamed(context, '/viewall')},
+                      child: Text(
+                        'View More',
+                        style: TextStyle(fontSize: 40),
+                      )),
                 )
               ],
             ),
