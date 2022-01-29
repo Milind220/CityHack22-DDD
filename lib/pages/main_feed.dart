@@ -106,6 +106,11 @@ class MainFeedScreen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: CrisisButton(
+        onClicFunc: () {
+          Navigator.pushNamed(context, '/crisis');
+        },
+      ),
     );
   }
 }
