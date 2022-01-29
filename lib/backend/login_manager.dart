@@ -10,6 +10,9 @@ class LoginManager {
     //do constructor here
   }
 
+  final userStream = FirebaseAuth.instance.authStateChanges();
+  final user = FirebaseAuth.instance.currentUser;
+
   Future<void> signInWithGoogle() async {
     try {
       final googleUser = await GoogleSignIn().signIn();
