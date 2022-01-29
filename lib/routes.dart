@@ -4,7 +4,7 @@ import 'package:sampleapp/pages/landing_page.dart';
 import 'package:sampleapp/pages/login.dart';
 import 'package:sampleapp/pages/signup.dart';
 import 'package:sampleapp/pages/crisis.dart';
-import 'package:sampleapp/pages/prefs.dart';
+import 'package:sampleapp/pages/preferences.dart';
 import 'package:sampleapp/pages/main_feed.dart';
 import 'package:sampleapp/pages/doctor_profile.dart';
 import 'package:sampleapp/pages/booking.dart';
