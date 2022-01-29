@@ -43,3 +43,7 @@ flutter:
   #   - assets/
   #   - assets/covers/
   #   - assets/congrats.gif
+assets:
+  -assets/
+  -assets/covers/
+  -assets/ladypic.jpg
