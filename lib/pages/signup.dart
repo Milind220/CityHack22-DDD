@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../components/normalbutton.dart';
 import '../components/crisisbutton.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,19 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TextField(
+                decoration: InputDecoration(hintText: 'Name'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              TextField(
                 decoration: InputDecoration(hintText: 'Email'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              TextField(
+                decoration: InputDecoration(hintText: 'Number'),
               ),
               SizedBox(
                 height: 20,
@@ -26,9 +38,9 @@ class LoginScreen extends StatelessWidget {
               Container(
                   margin: const EdgeInsets.only(top: 75.0),
                   child: NormalButton(
-                      buttonText: 'Login',
+                      buttonText: 'Signup',
                       onClickFunc: () => {
-                            Navigator.pushNamed(context, '/feed'),
+                            Navigator.pushNamed(context, '/prefs'),
                           }))
             ],
           )),

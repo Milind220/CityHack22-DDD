@@ -6,7 +6,13 @@ import 'package:google_fonts/google_fonts.dart';
 
 // examples:
 
-const kPrimaryBackgroundColor = Color(0xFF00C569);
+const kMiddleBlueColour = Color(0xFF8CD1E1);
+const kMiddleBlueGreenColour = Color(0xFFB5E7DC);
+const kMaxBlueGreenColour = Color(0xFF57C3BD);
+const kGlaucousColour = Color(0xFF6589C3);
+const kCameoPinkColour = Color(0xFFECB9C6);
+const kAmaranthPinkColour = Color(0xFFEE95B3);
+const kDeepChampagneColour = Color(0xFFECD099);
 
 final kButtonTextStyle = TextStyle(
   // GoogleFonts gives you access to a ton of font families.
