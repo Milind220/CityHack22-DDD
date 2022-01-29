@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../components/normalbutton.dart';
+import '../components/crisisbutton.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -6,8 +8,13 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
+      body: Container(
+        child: (Text('whatever')),
+      ),
+      floatingActionButton: CrisisButton(
+        onClicFunc: () {
+          Navigator.pushNamed(context, '/crisis');
+        },
       ),
     );
   }
