@@ -63,32 +63,51 @@ class MainFeedScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       GestureDetector(
-                        child: DoctorListTile(docName: 'Dr. Mike Chambers'),
+                        child: DoctorListTile(
+                          docName: 'Dr. Mike Chambers',
+                          docBlurb: 'Psychiatrist; Oxford',
+                          picPath: doctorpics[0],
+                        ),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(docName: 'Dr. Frederick Knowles'),
+                        child: DoctorListTile(
+                          docName: 'Dr. Frederick Knowles',
+                          docBlurb: 'Psychiatrist; Cambridge',
+                          picPath: doctorpics[1],
+                        ),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(docName: 'Dr. Bharad Rajosh'),
+                        child: DoctorListTile(
+                          docName: 'Dr. Bharad Rajosh',
+                          docBlurb: 'Psychiatrist; HKU',
+                          picPath: doctorpics[2],
+                        ),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child:
-                            DoctorListTile(docName: 'Dr. Gimmie Zimmerwoman'),
+                        child: DoctorListTile(
+                          docName: 'Dr. Gimmie Zimmerwoman',
+                          docBlurb: 'Psychiatrist; CUHK',
+                          picPath: doctorpics[3],
+                        ),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(docName: 'Dr. Leo Fridjeoff'),
+                        child: DoctorListTile(
+                          docName: 'Dr. Leo Fridjeoff',
+                          docBlurb: 'Psychiatrist; NUST',
+                          picPath: doctorpics[4],
+                        ),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
