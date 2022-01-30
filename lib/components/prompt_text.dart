@@ -10,7 +10,7 @@ class PromptText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       _text,
-      style: c_PromptText,
+      style: kPromptText,
       textAlign: TextAlign.center,
     );
   }

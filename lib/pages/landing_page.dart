@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import '../components/crisisbutton.dart';
 import '../constants.dart';
 import '../components/prompt_text.dart';
+import '/utils/consts.dart';
 
 class LandPage extends StatelessWidget {
   const LandPage({Key? key}) : super(key: key);
@@ -71,8 +72,21 @@ class FirstPage extends StatelessWidget {
       child: (Column(
         children: [
           Image.asset('assets/images/png_logo.png'),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 20, 0, 30),
+            child: Center(
+              child: Text(
+                'Mental health made simple.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
           PromptText(
-              'Welcome to ClearMynd! We are here to help you. We want to make it easier for you to gain access to the specific mental health support you are looking for by giving you access to which practioners are availible to you, and which might be the best match for you.')
+              'Welcome to ClearMynd! We are here to help you. We want to make it easy for you to access the specific mental health support you need.')
         ],
       )),
     );
