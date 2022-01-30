@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import '../components/crisisbutton.dart';
 import '../constants.dart';
 import '../components/prompt_text.dart';
+import '/utils/consts.dart';
 
 class LandPage extends StatelessWidget {
   const LandPage({Key? key}) : super(key: key);
@@ -71,8 +72,21 @@ class FirstPage extends StatelessWidget {
       child: (Column(
         children: [
           Image.asset('assets/images/png_logo.png'),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 20, 0, 30),
+            child: Center(
+              child: Text(
+                'Mental health made simple.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
           PromptText(
-              'Welcome to ClearMynd! We are here to help you. We want to make it easier for you to gain access to the specific mental health support you are looking for by giving you access to which practioners are availible to you, and which might be the best match for you.')
+              'Welcome to ClearMynd! We are here to help you. We want to make it easy for you to access the specific mental health support you need.')
         ],
       )),
     );
@@ -87,15 +101,24 @@ class CrisisModePage extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
+          child: Text(
+            'Having a mental health crisis? ',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+        ),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 10),
           child: PromptText(
-              'If you are having a mental health crisis press the icon in the bottom right in order to gain access to crisis resources that may help'),
+              'Press the icon in the bottom right to gain access to crisis resources that may help you!'),
         ),
         Container(
-            margin: EdgeInsets.only(top: 60),
-            height: 80,
-            child: Image.asset('assets/images/worried_pinpan.png')),
+          margin: EdgeInsets.only(top: 60),
+          height: 180,
+          child: Image.asset('assets/images/worried_pinpan.png'),
+        ),
       ],
     );
   }

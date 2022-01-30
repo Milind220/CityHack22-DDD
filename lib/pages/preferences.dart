@@ -66,7 +66,7 @@ class FirstTab extends StatelessWidget {
               Image.asset('assets/images/pinpan_head.png'),
               Text(
                 'Are you ready to input your preferences now?',
-                style: c_PromptText,
+                style: kPromptText,
                 textAlign: TextAlign.center,
               ),
               NormalButton(
