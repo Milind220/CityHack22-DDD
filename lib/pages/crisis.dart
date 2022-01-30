@@ -8,6 +8,7 @@ class CrisisScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: (Scaffold(
           body: Container(
         padding: const EdgeInsets.all(45.0),
