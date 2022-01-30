@@ -2,6 +2,7 @@
 import '../components/normalbutton.dart';
 import 'package:flutter/material.dart';
 import '../components/crisisbutton.dart';
+import '../constants.dart';
 
 class LandPage extends StatelessWidget {
   const LandPage({Key? key}) : super(key: key);

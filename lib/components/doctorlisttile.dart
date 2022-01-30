@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sampleapp/utils/consts.dart';
 import '../components/pillcomponent.dart';
+import '../constants.dart';
 
 class DoctorListTile extends StatelessWidget {
   const DoctorListTile({Key? key}) : super(key: key);
@@ -93,9 +94,9 @@ class PillArea extends StatelessWidget {
         children: [
           Column(
             children: [
-              PillComponent(PillColor: Colors.greenAccent, PillText: 'Match'),
-              PillComponent(PillColor: Colors.greenAccent, PillText: 'Match'),
-              PillComponent(PillColor: Colors.greenAccent, PillText: 'Match'),
+              PillComponent(PillColor: kMaxBlueGreenColour, PillText: 'Match'),
+              PillComponent(PillColor: kMaxBlueGreenColour, PillText: 'Match'),
+              PillComponent(PillColor: kMaxBlueGreenColour, PillText: 'Match'),
             ],
           ),
           Column(
@@ -103,11 +104,11 @@ class PillArea extends StatelessWidget {
               Column(
                 children: [
                   PillComponent(
-                      PillColor: Colors.redAccent, PillText: 'misMatch'),
+                      PillColor: kAmaranthPinkColour, PillText: 'misMatch'),
                   PillComponent(
-                      PillColor: Colors.redAccent, PillText: 'misMatch'),
+                      PillColor: kAmaranthPinkColour, PillText: 'misMatch'),
                   PillComponent(
-                      PillColor: Colors.redAccent, PillText: 'misMatch'),
+                      PillColor: kAmaranthPinkColour, PillText: 'misMatch'),
                 ],
               ),
             ],

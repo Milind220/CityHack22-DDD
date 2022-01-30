@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants.dart';
 
 class CrisisButton extends StatelessWidget {
   final VoidCallback onClicFunc;
@@ -9,7 +10,7 @@ class CrisisButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
         onPressed: onClicFunc,
-        backgroundColor: Colors.red,
+        backgroundColor: kSlightlyMoreAgressive,
         child: const Icon(Icons.add_alert_outlined));
   }
 }

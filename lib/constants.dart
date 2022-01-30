@@ -13,6 +13,7 @@ const kGlaucousColour = Color(0xFF6589C3);
 const kCameoPinkColour = Color(0xFFECB9C6);
 const kAmaranthPinkColour = Color(0xFFEE95B3);
 const kDeepChampagneColour = Color(0xFFECD099);
+const kSlightlyMoreAgressive = Color(0xFFEE7979);
 
 final kButtonTextStyle = TextStyle(
   // GoogleFonts gives you access to a ton of font families.
