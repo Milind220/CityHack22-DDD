@@ -11,6 +11,6 @@ class User {
     this.profile,
   );
 
-  String? get name => _name;
-  String? get userId => _userId;
+  String get name => _name;
+  String get userId => _userId;
 }

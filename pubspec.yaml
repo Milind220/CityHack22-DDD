@@ -12,6 +12,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  syncfusion_flutter_datepicker: ^19.4.47
 
   cupertino_icons: ^1.0.2
   firebase_core: 1.8.0
@@ -23,7 +24,7 @@ dependencies:
   provider: 6.0.1
   font_awesome_flutter: 9.2.0  # FontAwesomeIcons gives you access to many more icons.
   google_fonts: 2.1.0
-  # rxdart: 0.27.2
+  rxdart: 0.27.2
   json_annotation: 4.3.0
 
 dev_dependencies:
@@ -43,3 +44,7 @@ flutter:
   #   - assets/
   #   - assets/covers/
   #   - assets/congrats.gif
+assets:
+  -assets/
+  -assets/covers/
+  -assets/ladypic.jpg

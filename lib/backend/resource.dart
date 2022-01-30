@@ -1,11 +1,15 @@
 class Resource {
-  final String resourceLink;
-  final String title;
-  final String description;
+  final String _resourceLink;
+  final String _title;
+  final String _description;
 
   Resource(
-    this.resourceLink,
-    this.title,
-    this.description,
+    this._resourceLink,
+    this._title,
+    this._description,
   );
+
+  String get resourceLink => _resourceLink;
+  String get title => _title;
+  String get description => _description;
 }
