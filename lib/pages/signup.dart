@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sampleapp/backend/data_manager.dart';
 import 'package:sampleapp/utils/dataStore.dart';
 import '../components/normalbutton.dart';
@@ -19,25 +20,32 @@ class SignupScreen extends StatelessWidget {
               children: [
                 Image.asset('assets/images/png_logo.png'),
                 TextField(
-                  decoration: InputDecoration(hintText: 'Name'),
+                  decoration: InputDecoration(
+                      hintText: 'Name', icon: Icon(Icons.person)),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TextField(
-                  decoration: InputDecoration(hintText: 'Email'),
+                  decoration: InputDecoration(
+                      hintText: 'Email', icon: Icon(FontAwesomeIcons.envelope)),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TextField(
-                  decoration: InputDecoration(hintText: 'Number'),
+                  decoration: InputDecoration(
+                      hintText: 'Number', icon: Icon(FontAwesomeIcons.phone)),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TextField(
-                  decoration: InputDecoration(hintText: 'Password'),
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: 'Password',
+                    icon: Icon(Icons.password),
+                  ),
                 ),
                 Container(
                     margin: const EdgeInsets.only(top: 75.0),
