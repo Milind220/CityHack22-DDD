@@ -43,6 +43,7 @@ class FirstTab extends StatelessWidget {
           padding: EdgeInsets.all(10),
           child: Column(
             children: [
+              Image.asset('assets/images/pinpan_head.png'),
               Text(
                 'Are you ready to input your preferences now?',
                 style: c_PromptText,
@@ -68,13 +69,19 @@ class ProviderTypeTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageViewTab(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        PromptText('Are you ready to input your preferences now?'),
-        NormalButton(buttonText: 'Psychiatrist', onClickFunc: () => {}),
-        NormalButton(buttonText: 'Psychologist', onClickFunc: () => {}),
-        NormalButton(buttonText: 'Support Group', onClickFunc: () => {}),
-        NormalButton(buttonText: 'Not Sure', onClickFunc: () => {}),
+        PageViewTab(
+          children: [
+            PromptText('Are you ready to input your preferences now?'),
+            NormalButton(buttonText: 'Psychiatrist', onClickFunc: () => {}),
+            NormalButton(buttonText: 'Psychologist', onClickFunc: () => {}),
+            NormalButton(buttonText: 'Support Group', onClickFunc: () => {}),
+            NormalButton(buttonText: 'Not Sure', onClickFunc: () => {}),
+            Image.asset('assets/images/pinpan_walk.png')
+          ],
+        ),
       ],
     );
   }
@@ -85,104 +92,112 @@ class FurtherQuestionsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageViewTab(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        PromptText('How would prefer sessions to be delivered?'),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              flex: 1,
-              child: NormalButton(
-                buttonText: 'Virtual',
-                onClickFunc: () => {},
+        Container(
+          alignment: Alignment.center,
+          child: PageViewTab(
+            children: [
+              PromptText('How would prefer sessions to be delivered?'),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: NormalButton(
+                      buttonText: 'Virtual',
+                      onClickFunc: () => {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: NormalButton(
+                      buttonText: 'Virtual',
+                      onClickFunc: () => {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: NormalButton(
+                      buttonText: 'Virtual',
+                      onClickFunc: () => {},
+                    ),
+                  ),
+                ],
               ),
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Expanded(
-              flex: 1,
-              child: NormalButton(
-                buttonText: 'Virtual',
-                onClickFunc: () => {},
+              PromptText('What is your preferred cost/pricing bracket?'),
+              DropDownList(
+                options: <String>['English', 'Cantonese', 'Mandarin'],
               ),
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Expanded(
-              flex: 1,
-              child: NormalButton(
-                buttonText: 'Virtual',
-                onClickFunc: () => {},
+              PromptText('What is your preferred cost/pricing bracket?'),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: NormalButton(
+                      buttonText: 'Virtual',
+                      onClickFunc: () => {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: NormalButton(
+                      buttonText: 'Virtual',
+                      onClickFunc: () => {},
+                    ),
+                  ),
+                ],
               ),
-            ),
-          ],
-        ),
-        PromptText('What is your preferred cost/pricing bracket?'),
-        DropDownList(
-          options: <String>['English', 'Cantonese', 'Mandarin'],
-        ),
-        PromptText('What is your preferred cost/pricing bracket?'),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              flex: 1,
-              child: NormalButton(
-                buttonText: 'Virtual',
-                onClickFunc: () => {},
+              PromptText('Age group?'),
+              DropDownList(
+                options: ['20 - 30', '30 - 50', '50+'],
               ),
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Expanded(
-              flex: 1,
-              child: NormalButton(
-                buttonText: 'Virtual',
-                onClickFunc: () => {},
+              PromptText('Treatment type:'),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: NormalButton(
+                      buttonText: 'Virtual',
+                      onClickFunc: () => {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: NormalButton(
+                      buttonText: 'Virtual',
+                      onClickFunc: () => {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: NormalButton(
+                      buttonText: 'Virtual',
+                      onClickFunc: () => {},
+                    ),
+                  ),
+                ],
               ),
-            ),
-          ],
-        ),
-        PromptText('Age group?'),
-        DropDownList(
-          options: ['20 - 30', '30 - 50', '50+'],
-        ),
-        PromptText('Treatment type:'),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              flex: 1,
-              child: NormalButton(
-                buttonText: 'Virtual',
-                onClickFunc: () => {},
-              ),
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Expanded(
-              flex: 1,
-              child: NormalButton(
-                buttonText: 'Virtual',
-                onClickFunc: () => {},
-              ),
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Expanded(
-              flex: 1,
-              child: NormalButton(
-                buttonText: 'Virtual',
-                onClickFunc: () => {},
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ],
     );
@@ -202,23 +217,29 @@ class ValuesTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          PromptText(
-              'I would prefer if my doctor has experience with or values...'),
-          Wrap(
-            children: values.map((item) {
-              return Container(
-                margin: EdgeInsets.only(left: 7.0),
-                child: Chip(
-                  label: Text(item),
-                ),
-              );
-            }).toList(),
-          )
-        ],
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          child: Column(
+            children: [
+              PromptText(
+                  'I would prefer if my doctor has experience with or values...'),
+              Wrap(
+                children: values.map((item) {
+                  return Container(
+                    margin: EdgeInsets.only(left: 7.0),
+                    child: Chip(
+                      label: Text(item),
+                    ),
+                  );
+                }).toList(),
+              ),
+              Image.asset('assets/images/pinpan.png')
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
