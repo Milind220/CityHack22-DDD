@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sampleapp/components/circle_profile_picture.dart';
 import 'package:sampleapp/components/doctorlisttile.dart';
 import 'package:sampleapp/components/pillcomponent.dart';
 
@@ -7,7 +8,6 @@ const String docImg =
 
 class DocProfileScreen extends StatelessWidget {
   const DocProfileScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,24 +18,86 @@ class DocProfileScreen extends StatelessWidget {
             color: const Color(0xFFC4C4C4),
             child: Column(
               children: [
-                //SizedBox(height: 20),
+                const SizedBox(height: 40),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    CircleAvatar(child: Image.network(docImg)),
+                    CircleProfilePicture(
+                      imgUrl: docImg,
+                      innerRadius: 60.0,
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    Container(
+                      height: 120,
+                      width: 200,
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            margin: const EdgeInsets.all(5),
+                            color: Colors.white,
+                            height: 40,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.all(5),
+                            color: Colors.grey,
+                            height: 40,
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Column(
                       children: [
-                        PillComponent(
-                          PillColor: Colors.green,
-                          PillText: 'Online',
+                        Container(
+                          margin: const EdgeInsets.all(5),
+                          color: Colors.pink,
+                          height: 20,
+                          width: 100,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.all(5),
+                          color: Colors.pink,
+                          height: 20,
+                          width: 100,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.all(5),
+                          color: Colors.pink,
+                          height: 20,
+                          width: 100,
                         ),
                       ],
                     ),
-                    Column(),
+                    const SizedBox(height: 20),
+                    Column(
+                      children: [
+                        Container(
+                          color: Colors.blue,
+                          height: 30,
+                          width: 100,
+                        ),
+                        Container(
+                          color: Colors.blue,
+                          height: 30,
+                          width: 100,
+                        ),
+                        Container(
+                          color: Colors.blue,
+                          height: 30,
+                          width: 100,
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ],
@@ -45,7 +107,7 @@ class DocProfileScreen extends StatelessWidget {
         Expanded(
           flex: 3,
           child: Container(
-            color: Color(0xFFFFFFFF),
+            color: const Color(0xFFFFFFFF),
           ),
         ),
         Expanded(
