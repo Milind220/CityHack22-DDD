@@ -112,7 +112,7 @@ class CrisisModePage extends StatelessWidget {
         Container(
           padding: EdgeInsets.symmetric(horizontal: 10),
           child: PromptText(
-              'Press the icon in the bottom right to gain access to crisis resources that may help you.'),
+              'Press the icon in the bottom right to gain access to crisis resources that may help you!'),
         ),
         Container(
           margin: EdgeInsets.only(top: 60),
