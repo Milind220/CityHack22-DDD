@@ -9,7 +9,7 @@ import 'package:sampleapp/pages/main_feed.dart';
 import 'package:sampleapp/pages/doctor_profile.dart';
 import 'package:sampleapp/pages/booking.dart';
 import 'package:sampleapp/pages/view_all.dart';
-import 'package:sampleapp/pages/login.dart';
+//import 'package:sampleapp/pages/login.dart';
 
 var appRoutes = {
   '/': (context) => const LandPage(),

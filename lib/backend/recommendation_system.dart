@@ -6,7 +6,7 @@ class RecommendationSystem {
   static final RecommendationSystem _instance =
       RecommendationSystem._privateConstructor();
 
-  RecommendationSystem get instance => _instance;
+  static RecommendationSystem get instance => _instance;
 
   RecommendationSystem._privateConstructor();
 

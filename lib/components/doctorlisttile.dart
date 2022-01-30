@@ -4,7 +4,10 @@ import '../components/pillcomponent.dart';
 import '../constants.dart';
 
 class DoctorListTile extends StatelessWidget {
-  const DoctorListTile({Key? key}) : super(key: key);
+  //const DoctorListTile({Key? key}) : super(key: key);
+
+  final String docName;
+  DoctorListTile({required this.docName});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +32,9 @@ class DoctorListTile extends StatelessWidget {
           //mainAxisAlignment: MainAxisAlignment.center,
           //crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            NameArea(),
+            NameArea(
+              docName: docName,
+            ),
             PillArea(),
           ],
         ),
@@ -39,7 +44,9 @@ class DoctorListTile extends StatelessWidget {
 }
 
 class NameArea extends StatelessWidget {
-  const NameArea({Key? key}) : super(key: key);
+  //const NameArea({Key? key}) : super(key: key);
+  final String docName;
+  NameArea({required this.docName});
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +66,7 @@ class NameArea extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(10),
                 child: Text(
-                  'Doc Name',
+                  docName,
                   style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                 ),
               ),

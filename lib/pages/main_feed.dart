@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sampleapp/backend/data_manager.dart';
+import 'package:sampleapp/backend/recommendation_system.dart';
 import 'package:sampleapp/utils/consts.dart';
 import 'package:sampleapp/utils/dataStore.dart';
 import '../components/crisisbutton.dart';
@@ -12,6 +13,8 @@ class MainFeedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     allHealthcareProviders = DataManager.instance.getAllDoctors();
+    var results = RecommendationSystem.instance
+        .getTopRecommendations(loggedInUser!, allHealthcareProviders, 5);
 
     List<String> doctorpics = [
       'assets/images/Doc1.jpeg',
@@ -64,31 +67,36 @@ class MainFeedScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       GestureDetector(
-                        child: DoctorListTile(),
+                        child:
+                            DoctorListTile(docName: results[0].provider.name),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(),
+                        child:
+                            DoctorListTile(docName: results[1].provider.name),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(),
+                        child:
+                            DoctorListTile(docName: results[2].provider.name),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(),
+                        child:
+                            DoctorListTile(docName: results[3].provider.name),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(),
+                        child:
+                            DoctorListTile(docName: results[4].provider.name),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },

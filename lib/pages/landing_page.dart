@@ -17,7 +17,33 @@ class LandPage extends StatelessWidget {
             children: [
               FirstPage(),
               CrisisModePage(),
-              LastPage(),
+              Center(
+                child: Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(45.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/png_logo.png'),
+                      NormalButton(
+                        buttonText: 'Login',
+                        onClickFunc: () =>
+                            {Navigator.pushNamed(context, '/login')},
+                      ),
+                      NormalButton(
+                          buttonText: 'Signup',
+                          onClickFunc: () =>
+                              {Navigator.pushNamed(context, '/signup')}),
+                      NormalButton(
+                          buttonText: 'Continue as Guest',
+                          onClickFunc: () => {
+                                Navigator.pushNamed(context, '/prefs'),
+                              }),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
