@@ -2,7 +2,7 @@
 
 ## Project: < ClearMynd >
 
-<img src="./assets/png_logo.png" width="200" alt="project_logo"/>
+<img src="./assets/png_logo.png" alt="project_logo"/>
 
 < Replace the logo above with Your Project Logo >
 
@@ -23,14 +23,16 @@ ClearMynd is a Platform as a Service which helps individuals seek Mental Health 
 ## 3 Most Impactful Features of the Project (with Screenshot and Short Description (150 words))
 
 1. Dynamic Recommender System
-Individuals can input their preferences of what their practitioner will be like so that they are more comfortable with the experience. These preferences will then be used to tailor the choices of the user, this recommender system will also show them what is compatible and not compatible about a specific practitioner. This increases transparency and comfort for the user, while increasing ease of use.
+<img src="./assets/SS1.jpg" alt="SS1"/>
+Individuals can input their preferences of what their ideal practitioner is like so that they are more comfortable with the experience. These preferences will then be used to tailor the choices of the user, this recommender system will also show them what is compatible and not compatible about a specific practitioner. This increases transparency and comfort for the user, while increasing ease of use. This is supposed increase visibility and as a result improve the overall trust of the system.
 
-2. practitioner profile with opinions and personality for users to view
 
-practitioners are able to publish a personal profile of themselves to communicate their personality and treatment style. This means that they can attract the patients that they are best suited to treat which will improve their experience and the experience of the patients. 
+2. Personal Preference Profile
+<img src="./assets/SS2.jpg" alt="SS2"/>
+Individuals will be able to select their preferences with a dynamic system. The system is designed to be as accessible as possible, regardless of age, medical knowledge or many other factors. It is designed in such a way to encourage as many users as possible to add their profile and as a result get the best options possible. 
 
 3. In-app booking system
-
+<img src="./assets/SS3.jpg" alt="SS3"/>
 Once an individual has chosen a practitioner that they feel suits them, they can then make a booking through the app which would be able to connect to the practitioners in house booking system. This makes the whole process easier and less stressful for the individual who does not have to deal with the individual doctors booking system. 
 
 
