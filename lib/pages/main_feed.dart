@@ -12,6 +12,16 @@ class MainFeedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     allHealthcareProviders = DataManager.instance.getAllDoctors();
+
+    List<String> doctorpics = [
+      'assets/images/Doc1.jpeg',
+      'assets/images/Doc2.jpeg',
+      'assets/images/Doc3.jpeg',
+      'assets/images/Doc4.jpeg',
+      'assets/images/Doc5.jpeg',
+      'assets/images/ladypic.jpg'
+    ];
+
     return Scaffold(
       body: ListView(
         children: [

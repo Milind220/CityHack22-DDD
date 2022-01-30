@@ -22,3 +22,10 @@ final kButtonTextStyle = TextStyle(
   fontWeight: FontWeight.w600,
   color: Colors.black,
 );
+
+final ProfileTextStyle = TextStyle(
+  fontFamily: GoogleFonts.roboto().fontFamily,
+  fontSize: 20,
+);
+
+final kquestionTextStyle = TextStyle(fontWeight: FontWeight.bold);
