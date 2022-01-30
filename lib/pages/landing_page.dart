@@ -15,6 +15,7 @@ class LandPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
           child: PageView(
@@ -67,28 +68,30 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10),
-      child: (Column(
-        children: [
-          Image.asset('assets/images/png_logo.png'),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 20, 0, 30),
-            child: Center(
-              child: Text(
-                'Mental health made simple.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        child: (Column(
+          children: [
+            Image.asset('assets/images/png_logo.png'),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 20, 0, 30),
+              child: Center(
+                child: Text(
+                  'Mental health made simple.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
-          ),
-          PromptText(
-              'Welcome to ClearMynd! We are here to help you. We want to make it easy for you to access the specific mental health support you need.')
-        ],
-      )),
+            PromptText(
+                'Welcome to ClearMynd! We are here to help you. We want to make it easy for you to access the specific mental health support you need.')
+          ],
+        )),
+      ),
     );
   }
 }

@@ -9,8 +9,14 @@ class DoctorListTile extends StatelessWidget {
   final String docName;
   final String docBlurb;
   final String picPath;
+  final List<String> valueList;
+  final List<int> valueIndex;
   DoctorListTile(
-      {required this.docName, required this.docBlurb, required this.picPath});
+      {required this.docName,
+      required this.docBlurb,
+      required this.picPath,
+      required this.valueIndex,
+      required this.valueList});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +46,10 @@ class DoctorListTile extends StatelessWidget {
               docBlurb: docBlurb,
               picPath: picPath,
             ),
-            PillArea(),
+            PillArea(
+              valueIndex: valueIndex,
+              valueList: valueList,
+            ),
           ],
         ),
       ),
@@ -99,7 +108,10 @@ class NameArea extends StatelessWidget {
 }
 
 class PillArea extends StatelessWidget {
-  const PillArea({Key? key}) : super(key: key);
+  //const PillArea({Key? key}) : super(key: key);
+  final List<String> valueList;
+  final List<int> valueIndex;
+  PillArea({required this.valueList, required this.valueIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -109,9 +121,15 @@ class PillArea extends StatelessWidget {
         children: [
           Column(
             children: [
-              PillComponent(PillColor: kMaxBlueGreenColour, PillText: 'Match'),
-              PillComponent(PillColor: kMaxBlueGreenColour, PillText: 'Match'),
-              PillComponent(PillColor: kMaxBlueGreenColour, PillText: 'Match'),
+              PillComponent(
+                  PillColor: kMaxBlueGreenColour,
+                  PillText: valueList[valueIndex[0]]),
+              PillComponent(
+                  PillColor: kMaxBlueGreenColour,
+                  PillText: valueList[valueIndex[1]]),
+              PillComponent(
+                  PillColor: kMaxBlueGreenColour,
+                  PillText: valueList[valueIndex[2]]),
             ],
           ),
           Column(
@@ -119,11 +137,14 @@ class PillArea extends StatelessWidget {
               Column(
                 children: [
                   PillComponent(
-                      PillColor: kAmaranthPinkColour, PillText: 'misMatch'),
+                      PillColor: kAmaranthPinkColour,
+                      PillText: valueList[valueIndex[3]]),
                   PillComponent(
-                      PillColor: kAmaranthPinkColour, PillText: 'misMatch'),
+                      PillColor: kAmaranthPinkColour,
+                      PillText: valueList[valueIndex[4]]),
                   PillComponent(
-                      PillColor: kAmaranthPinkColour, PillText: 'misMatch'),
+                      PillColor: kAmaranthPinkColour,
+                      PillText: valueList[valueIndex[5]]),
                 ],
               ),
             ],

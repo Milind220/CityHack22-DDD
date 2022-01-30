@@ -7,7 +7,7 @@ import 'package:sampleapp/utils/dataStore.dart';
 const String docImg =
     'https://media.istockphoto.com/photos/happy-healthcare-practitioner-picture-id138205019?k=20&m=138205019&s=612x612&w=0&h=KpsSMVsplkOqTnAJmOye4y6DcciVYIBe5dYDgYXLVW4=';
 
-const String name = 'Alex Scriba';
+const String name = 'Mike Chambers';
 const String q1 = 'Are you open at nights?';
 
 const String a1 = 'No we are only open during normal working hours.';
