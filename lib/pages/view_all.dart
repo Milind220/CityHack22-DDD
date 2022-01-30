@@ -10,12 +10,18 @@ class ViewAllScreen extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
+          Container(
+              //color: Colors.red,
+              margin: EdgeInsets.all(9),
+              height: 100,
+              child: Image.asset('assets/images/pinpan_thinhead.png')),
           DoctorListTile(),
           DoctorListTile(),
           DoctorListTile(),
           DoctorListTile(),
           DoctorListTile(),
           DoctorListTile(),
+          Image.asset('assets/images/pinpan.png'),
         ],
       ),
       floatingActionButton: CrisisButton(

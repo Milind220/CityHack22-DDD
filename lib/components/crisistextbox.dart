@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants.dart';
 
 class CrisisTextBox extends StatelessWidget {
   const CrisisTextBox({Key? key}) : super(key: key);
@@ -28,6 +29,8 @@ class CrisisTextBox extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   alignment: Alignment.centerRight,
                   child: OutlinedButton(
+                    style:
+                        OutlinedButton.styleFrom(primary: kMaxBlueGreenColour),
                     child: Text('Make an Appointment'),
                     onPressed: () => {null},
                   )),
@@ -37,14 +40,14 @@ class CrisisTextBox extends StatelessWidget {
           decoration: const BoxDecoration(
               color: Colors.white,
               border: Border(
-                top: BorderSide(width: 1.0, color: Colors.blue),
-                left: BorderSide(width: 1.0, color: Colors.blue),
-                right: BorderSide(width: 1.0, color: Colors.blue),
-                bottom: BorderSide(width: 1.0, color: Colors.blue),
+                top: BorderSide(width: 1.0, color: kMiddleBlueColour),
+                left: BorderSide(width: 1.0, color: kMiddleBlueColour),
+                right: BorderSide(width: 1.0, color: kMiddleBlueColour),
+                bottom: BorderSide(width: 1.0, color: kMiddleBlueColour),
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.blue,
+                  color: kMiddleBlueColour,
                   spreadRadius: 3,
                   blurRadius: 10,
                   offset: Offset(5, 5),

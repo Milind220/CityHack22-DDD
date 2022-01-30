@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sampleapp/utils/consts.dart';
 import '../components/crisisbutton.dart';
 import '../components/doctorlisttile.dart';
+import '../constants.dart';
 
 class MainFeedScreen extends StatelessWidget {
   const MainFeedScreen({Key? key}) : super(key: key);
@@ -16,12 +17,19 @@ class MainFeedScreen extends StatelessWidget {
             child: Column(
               //mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                    //color: Colors.red,
+                    margin: EdgeInsets.all(0),
+                    height: 100,
+                    child: Image.asset('assets/images/pinpan_thinhead.png')),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
                       margin: EdgeInsets.only(bottom: 40, top: 15),
                       child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                              primary: kMaxBlueGreenColour),
                           onPressed: () => {
                                 Navigator.pushNamed(context, '/feed'),
                               },
@@ -30,6 +38,8 @@ class MainFeedScreen extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(bottom: 40, top: 15),
                       child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                              primary: kMaxBlueGreenColour),
                           onPressed: () => {
                                 Navigator.pushNamed(context, '/feed'),
                               },
@@ -77,6 +87,8 @@ class MainFeedScreen extends StatelessWidget {
                   width: 250,
                   margin: EdgeInsets.symmetric(vertical: 40),
                   child: OutlinedButton(
+                    style:
+                        OutlinedButton.styleFrom(primary: kMaxBlueGreenColour),
                     onPressed: () => {null},
 
                     child: Container(
@@ -92,15 +104,17 @@ class MainFeedScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(bottom: 150),
+                  margin: EdgeInsets.only(bottom: 0),
                   child: ElevatedButton(
-                      onPressed: () =>
-                          {Navigator.pushNamed(context, '/viewall')},
-                      child: Text(
-                        'View More',
-                        style: TextStyle(fontSize: 40),
-                      )),
-                )
+                    style: ElevatedButton.styleFrom(primary: kMiddleBlueColour),
+                    onPressed: () => {Navigator.pushNamed(context, '/viewall')},
+                    child: Text(
+                      'View More',
+                      style: TextStyle(fontSize: 40),
+                    ),
+                  ),
+                ),
+                Image.asset('assets/images/pinpan.png'),
               ],
             ),
           ),

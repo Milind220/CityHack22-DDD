@@ -2,6 +2,7 @@
 import '../components/normalbutton.dart';
 import 'package:flutter/material.dart';
 import '../components/crisisbutton.dart';
+import '../constants.dart';
 
 class LandPage extends StatelessWidget {
   const LandPage({Key? key}) : super(key: key);
@@ -18,6 +19,7 @@ class LandPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Image.asset('assets/images/png_logo.png'),
                 NormalButton(
                   buttonText: 'Login',
                   onClickFunc: () => {Navigator.pushNamed(context, '/login')},

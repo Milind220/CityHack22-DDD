@@ -15,6 +15,9 @@ class CrisisScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Container(
+                height: 200,
+                child: Image.asset('assets/images/worried_pinpan.png')),
             CrisisTextBox(),
             NormalButton(
                 buttonText: 'Call Help Line', onClickFunc: () => {null}),

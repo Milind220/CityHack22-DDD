@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sampleapp/utils/consts.dart';
 import '../components/pillcomponent.dart';
+import '../constants.dart';
 
 class DoctorListTile extends StatelessWidget {
   const DoctorListTile({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class DoctorListTile extends StatelessWidget {
               ),
             ]),
         //alignment: Alignment.center,
-        width: 302,
+        width: 305,
         //color: c_primaryColor,
         child: Column(
           //mainAxisAlignment: MainAxisAlignment.center,
@@ -48,9 +49,11 @@ class NameArea extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
-            width: 100,
-            child: const Icon(Icons.account_box_sharp),
-          ),
+              margin: EdgeInsets.only(left: 5),
+              width: 100,
+              child: Image.asset('assets/images/ladypic.jpg')
+              //const Icon(Icons.account_box_sharp),
+              ),
           Column(
             children: [
               Container(
@@ -91,9 +94,9 @@ class PillArea extends StatelessWidget {
         children: [
           Column(
             children: [
-              PillComponent(PillColor: Colors.greenAccent, PillText: 'Match'),
-              PillComponent(PillColor: Colors.greenAccent, PillText: 'Match'),
-              PillComponent(PillColor: Colors.greenAccent, PillText: 'Match'),
+              PillComponent(PillColor: kMaxBlueGreenColour, PillText: 'Match'),
+              PillComponent(PillColor: kMaxBlueGreenColour, PillText: 'Match'),
+              PillComponent(PillColor: kMaxBlueGreenColour, PillText: 'Match'),
             ],
           ),
           Column(
@@ -101,11 +104,11 @@ class PillArea extends StatelessWidget {
               Column(
                 children: [
                   PillComponent(
-                      PillColor: Colors.redAccent, PillText: 'misMatch'),
+                      PillColor: kAmaranthPinkColour, PillText: 'misMatch'),
                   PillComponent(
-                      PillColor: Colors.redAccent, PillText: 'misMatch'),
+                      PillColor: kAmaranthPinkColour, PillText: 'misMatch'),
                   PillComponent(
-                      PillColor: Colors.redAccent, PillText: 'misMatch'),
+                      PillColor: kAmaranthPinkColour, PillText: 'misMatch'),
                 ],
               ),
             ],

@@ -1,16 +1,36 @@
-# sampleapp
+# CityHack22 Project Submission
 
-A new Flutter project.
+## Project: < Your CityHack22 Project Name >
 
-## Getting Started
+<img src="./assets/png_logo.png" width="200" alt="project_logo"/>
 
-This project is a starting point for a Flutter application.
+< Replace the logo above with Your Project Logo >
 
-A few resources to get you started if this is your first Flutter project:
+## Team: Dinky Dong Department
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Members
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-   Milind Sharma (Leader)
+-   Matthew Chamberlin
+-   Matthew Betty
+-   Michael Kurzewski
+-   Alexander Scriba
+
+## Description of the Project (300 words)
+
+## 3 Most Impactful Features of the Project (with Screenshot and Short Description (150 words))
+
+1. < First Feature >
+2. < Second Feature >
+3. < Third Feature >
+
+## Tech used (as many as required)
+
+1. Flutter
+2. Firebase Auth
+3. Firebase Firestore
+4. Proprietary Matching Algorithm
+
+## Link
+
+-   < 3 minute Youtube Video Link for Project Demo >
