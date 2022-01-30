@@ -1,4 +1,7 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:sampleapp/backend/data_manager.dart';
+import 'package:sampleapp/utils/dataStore.dart';
+
 import '../components/normalbutton.dart';
 import 'package:flutter/material.dart';
 import '../components/crisisbutton.dart';
@@ -49,6 +52,7 @@ class LandPage extends StatelessWidget {
         ),
         floatingActionButton: CrisisButton(
           onClicFunc: () {
+            loggedInUser = DataManager.instance.getUserData();
             Navigator.pushNamed(context, '/crisis');
           },
         ),
