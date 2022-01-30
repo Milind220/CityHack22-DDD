@@ -18,6 +18,7 @@ class LandPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Image.asset('assets/images/png_logo.png'),
                 NormalButton(
                   buttonText: 'Login',
                   onClickFunc: () => {Navigator.pushNamed(context, '/login')},

@@ -14,6 +14,7 @@ class SignupScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Image.asset('assets/images/png_logo.png'),
               TextField(
                 decoration: InputDecoration(hintText: 'Name'),
               ),

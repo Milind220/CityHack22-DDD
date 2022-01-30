@@ -22,7 +22,7 @@ class DoctorListTile extends StatelessWidget {
               ),
             ]),
         //alignment: Alignment.center,
-        width: 302,
+        width: 305,
         //color: c_primaryColor,
         child: Column(
           //mainAxisAlignment: MainAxisAlignment.center,
@@ -48,9 +48,11 @@ class NameArea extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
-            width: 100,
-            child: const Icon(Icons.account_box_sharp),
-          ),
+              margin: EdgeInsets.only(left: 5),
+              width: 100,
+              child: Image.asset('assets/images/ladypic.jpg')
+              //const Icon(Icons.account_box_sharp),
+              ),
           Column(
             children: [
               Container(
