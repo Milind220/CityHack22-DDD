@@ -4,8 +4,6 @@
 
 <img src="./assets/images/png_logo.png" width=200 alt="project_logo"/>
 
-< Replace the logo above with Your Project Logo >
-
 ## Team: Dinky Dong Department
 
 ## Members
