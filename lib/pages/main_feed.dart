@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sampleapp/backend/data_manager.dart';
 import 'package:sampleapp/utils/consts.dart';
+import 'package:sampleapp/utils/dataStore.dart';
 import '../components/crisisbutton.dart';
 import '../components/doctorlisttile.dart';
 import '../constants.dart';
@@ -9,6 +11,7 @@ class MainFeedScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    allHealthcareProviders = DataManager.instance.getAllDoctors();
     return Scaffold(
       body: ListView(
         children: [
