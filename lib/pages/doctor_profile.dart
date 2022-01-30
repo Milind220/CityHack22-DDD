@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sampleapp/components/circle_profile_picture.dart';
 import 'package:sampleapp/components/doctorlisttile.dart';
 import 'package:sampleapp/components/pillcomponent.dart';
@@ -24,11 +25,56 @@ class DocProfileScreen extends StatelessWidget {
               color: kMiddleBlueGreenColour,
               child: Column(
                 children: [
-                  TopRow(),
+                  const TopRow(),
                 ],
               ),
             ),
           ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Text(
+                      'Description',
+                      style: TextStyle(
+                        fontFamily: GoogleFonts.roboto().fontFamily,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: const Text(
+                        'My name is Doctor Name, I am a trained psychologist who studied at CityU. I have a lot of experience on working with patients who struggle with anxiety and depression. I hope that I can help you through troubled times...'),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'BOOK APPOINTMENT',
+                        style: TextStyle(
+                          fontFamily: GoogleFonts.roboto().fontFamily,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Divider(
+            color: Colors.black,
+          ),
+          Expanded(
+            flex: 4,
+            child: Container(),
+          )
         ],
       ),
     );
