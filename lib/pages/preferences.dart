@@ -5,6 +5,7 @@ import 'package:sampleapp/components/crisisbutton.dart';
 import 'package:sampleapp/components/normalbutton.dart';
 import 'package:sampleapp/components/prompt_text.dart';
 import 'package:sampleapp/utils/consts.dart';
+import '../constants.dart';
 
 class PreferenceScreen extends StatelessWidget {
   const PreferenceScreen({Key? key}) : super(key: key);
@@ -50,6 +51,7 @@ class FirstTab extends StatelessWidget {
               NormalButton(
                   buttonText: 'Yes, Let\'s GOOOOOO', onClickFunc: () => {}),
               OutlinedButton(
+                style: OutlinedButton.styleFrom(primary: kMaxBlueGreenColour),
                 onPressed: () => {},
                 child: Text('Not sure for now'),
               ),

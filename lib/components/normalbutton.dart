@@ -1,5 +1,5 @@
 //import 'dart:html';
-
+import '../constants.dart';
 import 'package:flutter/material.dart';
 
 class NormalButton extends StatelessWidget {
@@ -12,7 +12,12 @@ class NormalButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: double.infinity,
-        child: ElevatedButton(onPressed: onClickFunc, child: Text(buttonText)));
+      width: double.infinity,
+      child: ElevatedButton(
+        onPressed: onClickFunc,
+        child: Text(buttonText),
+        style: ElevatedButton.styleFrom(primary: kMiddleBlueColour),
+      ),
+    );
   }
 }
