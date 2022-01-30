@@ -16,11 +16,16 @@ class MainFeedScreen extends StatelessWidget {
             child: Column(
               //mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                    //color: Colors.red,
+                    margin: EdgeInsets.all(0),
+                    height: 100,
+                    child: Image.asset('assets/images/pinpan_thinhead.png')),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(bottom: 40, top: 15),
+                      margin: EdgeInsets.only(bottom: 40, top: 0),
                       child: OutlinedButton(
                           onPressed: () => {
                                 Navigator.pushNamed(context, '/feed'),
@@ -92,7 +97,7 @@ class MainFeedScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(bottom: 150),
+                  margin: EdgeInsets.only(bottom: 0),
                   child: ElevatedButton(
                       onPressed: () =>
                           {Navigator.pushNamed(context, '/viewall')},
@@ -100,7 +105,8 @@ class MainFeedScreen extends StatelessWidget {
                         'View More',
                         style: TextStyle(fontSize: 40),
                       )),
-                )
+                ),
+                Image.asset('assets/images/pinpan.png'),
               ],
             ),
           ),
