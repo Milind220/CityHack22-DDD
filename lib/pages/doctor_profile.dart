@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sampleapp/components/circle_profile_picture.dart';
-import 'package:sampleapp/components/doctorlisttile.dart';
-import 'package:sampleapp/components/pillcomponent.dart';
+
 import 'package:sampleapp/constants.dart';
 
 const String docImg =
     'https://media.istockphoto.com/photos/happy-healthcare-practitioner-picture-id138205019?k=20&m=138205019&s=612x612&w=0&h=KpsSMVsplkOqTnAJmOye4y6DcciVYIBe5dYDgYXLVW4=';
 
-const String q1 = 'How much do you cost per hour?';
-const String s2 = 'Can I organise a trial session to test it out?';
+const String q1 = 'How much do you charge per hour?';
+const String q2 = 'Can I organise a trial session to test it out?';
 
-const String a1 = 'It is 500 HDK / hour'
+const String a1 = 'It is 500 HDK / hour';
 const String a2 = 'yes, I am available for a trial session';
 
 class DocProfileScreen extends StatelessWidget {
@@ -45,21 +44,20 @@ class DocProfileScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Text(
                       'Description',
-                      style: TextStyle(
-                        fontFamily: GoogleFonts.roboto().fontFamily,
-                        fontSize: 20,
-                      ),
+                      style: ProfileTextStyle,
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: const Text(
                         'My name is Doctor Name, I am a trained psychologist who studied at CityU. I have a lot of experience on working with patients who struggle with anxiety and depression. I hope that I can help you through troubled times...'),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, '/booking');
+                    },
                     child: Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8.0),
                       child: Text(
                         'BOOK APPOINTMENT',
                         style: TextStyle(
@@ -74,7 +72,7 @@ class DocProfileScreen extends StatelessWidget {
               ),
             ),
           ),
-          Divider(
+          const Divider(
             color: Colors.black,
           ),
           Expanded(
@@ -82,10 +80,36 @@ class DocProfileScreen extends StatelessWidget {
             child: Container(
               child: Column(
                 children: [
-                  Text('FAQ'),
-                  Text(q1);
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Text(
+                      'FAQ',
+                      style: ProfileTextStyle,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Text(
+                      q1,
+                      style: kquestionTextStyle,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Text(a1),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Text(
+                      q2,
+                      style: kquestionTextStyle,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Text(a2),
+                  ),
                 ],
-
               ),
             ),
           )
