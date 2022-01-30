@@ -95,7 +95,11 @@ class ProviderTypeTab extends StatelessWidget {
         PageViewTab(
           children: [
             PromptText('Are you ready to input your preferences now?'),
-            NormalButton(buttonText: 'Psychiatrist', onClickFunc: () => {}),
+            NormalButton(
+              buttonText: 'Psychiatrist',
+              onClickFunc: () => {},
+              color: kMaxBlueGreenColour,
+            ),
             NormalButton(buttonText: 'Psychologist', onClickFunc: () => {}),
             NormalButton(buttonText: 'Support Group', onClickFunc: () => {}),
             NormalButton(buttonText: 'Not Sure', onClickFunc: () => {}),
@@ -131,6 +135,7 @@ class FurtherQuestionsTab extends StatelessWidget {
                     child: NormalButton(
                       buttonText: 'In-Person',
                       onClickFunc: () => {},
+                      color: kMaxBlueGreenColour,
                     ),
                   ),
                   SizedBox(
@@ -178,6 +183,7 @@ class FurtherQuestionsTab extends StatelessWidget {
                     child: NormalButton(
                       buttonText: 'Private',
                       onClickFunc: () => {},
+                      color: kMaxBlueGreenColour,
                     ),
                   ),
                   SizedBox(
@@ -211,6 +217,7 @@ class FurtherQuestionsTab extends StatelessWidget {
                     child: NormalButton(
                       buttonText: '30 - 50',
                       onClickFunc: () => {},
+                      color: kMaxBlueGreenColour,
                     ),
                   ),
                   SizedBox(
@@ -259,6 +266,9 @@ class ValuesTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final values = Value.values.map((x) => valToString(x));
+
+    // for demo
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -268,11 +278,27 @@ class ValuesTab extends StatelessWidget {
               PromptText(
                   'I would prefer if my doctor has experience with or values...'),
               Wrap(
-                children: values.map((item) {
+                children: values.map((
+                  item,
+                ) {
+                  Color? col;
+
+                  switch (item) {
+                    case 'LGBTQ':
+                    case 'Mental Disorder':
+                    case 'Depression':
+                      col = kMaxBlueGreenColour;
+                      break;
+                    default:
+                      break;
+                  }
                   return Container(
                     margin: EdgeInsets.only(left: 7.0),
                     child: Chip(
                       label: Text(item),
+                      backgroundColor: col == null
+                          ? kMiddleBlueGreenColour
+                          : kMaxBlueGreenColour,
                     ),
                   );
                 }).toList(),
