@@ -7,6 +7,7 @@ class DoctorListTile extends StatelessWidget {
   //const DoctorListTile({Key? key}) : super(key: key);
 
   final String docName;
+  //final String docBlurb;
   DoctorListTile({required this.docName});
 
   @override
