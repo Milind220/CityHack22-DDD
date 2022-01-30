@@ -7,16 +7,20 @@ class NormalButton extends StatelessWidget {
 
   final String buttonText;
   final VoidCallback onClickFunc;
+  final Color? color;
 
-  NormalButton({required this.buttonText, required this.onClickFunc});
+  NormalButton(
+      {required this.buttonText, required this.onClickFunc, this.color});
   @override
   Widget build(BuildContext context) {
+    Color usingColor = color == null ? kMiddleBlueColour : color!;
+
     return Container(
       width: double.infinity,
       child: ElevatedButton(
         onPressed: onClickFunc,
         child: Text(buttonText),
-        style: ElevatedButton.styleFrom(primary: kMiddleBlueColour),
+        style: ElevatedButton.styleFrom(primary: usingColor),
       ),
     );
   }

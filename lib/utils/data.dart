@@ -78,7 +78,7 @@ final List<Map<String, dynamic>> providers = [
       }
     ],
     'providerType': 0,
-    'consultationType': 3,
+    'consultationType': 2,
     'location': 1,
     'gender': 2,
     'ageGroup': 0,

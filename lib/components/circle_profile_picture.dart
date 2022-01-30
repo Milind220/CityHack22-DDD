@@ -20,7 +20,7 @@ class CircleProfilePicture extends StatelessWidget {
       radius: innerRadius + borderThickness,
       child: CircleAvatar(
         radius: innerRadius,
-        backgroundImage: NetworkImage(imgUrl),
+        backgroundImage: AssetImage(imgUrl),
       ),
     );
   }

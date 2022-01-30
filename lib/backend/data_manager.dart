@@ -48,7 +48,7 @@ class DataManager {
   }
 
   // Read user data from fires
-  Future<List<HealthcareProvider>> getAllDoctors() async {
+  List<HealthcareProvider> getAllDoctors() {
     // var ref = _db.collection('providers');
     // var snapshot = await ref.get();
     // var data = snapshot.docs.map((s) => s.data()).toList();
@@ -78,7 +78,7 @@ class DataManager {
       List<Map<String, String>> questionMaps = d['questions'];
       for (var i = 0; i < questionMaps.length; i++) {
         questions.add(
-            Question(questionMaps[i]['guestion']!, questionMaps[i]['answer']!));
+            Question(questionMaps[i]['question']!, questionMaps[i]['answer']!));
       }
 
       var profile = RecommendationProfile(provider, consultationType,
@@ -91,7 +91,7 @@ class DataManager {
   }
 
   // Retrieves a single quiz document
-  Future<User> getUserData() async {
+  User getUserData() {
     // var user = LoginManager.instance.user!;
     // var ref = _db.collection('users').doc(user.uid);
     // var snapshot = await ref.get();

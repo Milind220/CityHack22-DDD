@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sampleapp/backend/recommendation_profile.dart';
 import 'package:sampleapp/components/drop_down.dart';
 import 'package:sampleapp/components/page_view_tab.dart';
 import 'package:sampleapp/components/crisisbutton.dart';
@@ -8,15 +9,32 @@ import 'package:sampleapp/utils/consts.dart';
 import '../constants.dart';
 
 class PreferenceScreen extends StatelessWidget {
-  const PreferenceScreen({Key? key}) : super(key: key);
+  // int providerType = -1;
+  // int consultationType = -1;
+  // int language = -1;
+  // int costBracket = -1;
+  // int ageGroup = -1;
+  // int treatmentType = -1;
+  // List<int> values = [];
 
   @override
   Widget build(BuildContext context) {
+    PageController? pageController = PageController(
+      initialPage: 0,
+      keepPage: true,
+    );
+
+    void onStartPreferences() {
+      pageController.animateToPage(1,
+          duration: Duration(milliseconds: 500), curve: Curves.ease);
+    }
+
     return Scaffold(
       body: SafeArea(
         child: PageView(
+          controller: pageController,
           children: [
-            FirstTab(),
+            FirstTab(onClick: onStartPreferences),
             ProviderTypeTab(),
             FurtherQuestionsTab(),
             ValuesTab(),
@@ -33,7 +51,9 @@ class PreferenceScreen extends StatelessWidget {
 }
 
 class FirstTab extends StatelessWidget {
-  const FirstTab({Key? key}) : super(key: key);
+  FirstTab({Key? key, required this.onClick}) : super(key: key);
+
+  VoidCallback onClick;
 
   @override
   Widget build(BuildContext context) {
@@ -46,14 +66,14 @@ class FirstTab extends StatelessWidget {
               Image.asset('assets/images/pinpan_head.png'),
               Text(
                 'Are you ready to input your preferences now?',
-                style: c_PromptText,
+                style: kPromptText,
                 textAlign: TextAlign.center,
               ),
               NormalButton(
-                  buttonText: 'Yes, Let\'s GOOOOOO', onClickFunc: () => {}),
+                  buttonText: 'Yes, I\'m Ready!', onClickFunc: onClick),
               OutlinedButton(
                 style: OutlinedButton.styleFrom(primary: kMaxBlueGreenColour),
-                onPressed: () => {},
+                onPressed: () => {Navigator.pushNamed(context, '/feed')},
                 child: Text('Not sure for now'),
               ),
             ],
@@ -75,7 +95,11 @@ class ProviderTypeTab extends StatelessWidget {
         PageViewTab(
           children: [
             PromptText('Are you ready to input your preferences now?'),
-            NormalButton(buttonText: 'Psychiatrist', onClickFunc: () => {}),
+            NormalButton(
+              buttonText: 'Psychiatrist',
+              onClickFunc: () => {},
+              color: kMaxBlueGreenColour,
+            ),
             NormalButton(buttonText: 'Psychologist', onClickFunc: () => {}),
             NormalButton(buttonText: 'Support Group', onClickFunc: () => {}),
             NormalButton(buttonText: 'Not Sure', onClickFunc: () => {}),
@@ -93,8 +117,11 @@ class FurtherQuestionsTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      // mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        SizedBox(
+          height: 30,
+        ),
         Container(
           alignment: Alignment.center,
           child: PageViewTab(
@@ -106,8 +133,9 @@ class FurtherQuestionsTab extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: NormalButton(
-                      buttonText: 'Virtual',
+                      buttonText: 'In-Person',
                       onClickFunc: () => {},
+                      color: kMaxBlueGreenColour,
                     ),
                   ),
                   SizedBox(
@@ -126,7 +154,7 @@ class FurtherQuestionsTab extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: NormalButton(
-                      buttonText: 'Virtual',
+                      buttonText: 'Either',
                       onClickFunc: () => {},
                     ),
                   ),
@@ -143,7 +171,7 @@ class FurtherQuestionsTab extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: NormalButton(
-                      buttonText: 'Virtual',
+                      buttonText: 'Public',
                       onClickFunc: () => {},
                     ),
                   ),
@@ -153,24 +181,31 @@ class FurtherQuestionsTab extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: NormalButton(
-                      buttonText: 'Virtual',
+                      buttonText: 'Private',
+                      onClickFunc: () => {},
+                      color: kMaxBlueGreenColour,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: NormalButton(
+                      buttonText: 'Private Subsidised',
                       onClickFunc: () => {},
                     ),
                   ),
                 ],
               ),
-              PromptText('Age group?'),
-              DropDownList(
-                options: ['20 - 30', '30 - 50', '50+'],
-              ),
-              PromptText('Treatment type:'),
+              PromptText('Prefered Age Group:'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
                     flex: 1,
                     child: NormalButton(
-                      buttonText: 'Virtual',
+                      buttonText: '20 - 30',
                       onClickFunc: () => {},
                     ),
                   ),
@@ -180,8 +215,9 @@ class FurtherQuestionsTab extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: NormalButton(
-                      buttonText: 'Virtual',
+                      buttonText: '30 - 50',
                       onClickFunc: () => {},
+                      color: kMaxBlueGreenColour,
                     ),
                   ),
                   SizedBox(
@@ -190,10 +226,22 @@ class FurtherQuestionsTab extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: NormalButton(
-                      buttonText: 'Virtual',
+                      buttonText: '50+',
                       onClickFunc: () => {},
                     ),
                   ),
+                ],
+              ),
+              PromptText('Treatment Type:'),
+              DropDownList(
+                options: [
+                  'Not Sure',
+                  'Cognitive Behavioural Therapy',
+                  'Psychodynamic Therapy',
+                  'Humanistic Therapy',
+                  'Psychoanalytic therapy',
+                  'Holistic Therapy',
+                  'Couples Therapy',
                 ],
               ),
             ],
@@ -205,18 +253,22 @@ class FurtherQuestionsTab extends StatelessWidget {
 }
 
 class ValuesTab extends StatelessWidget {
-  final values = [
-    'LGBTQ',
-    'Religion',
-    'Youth Services',
-    'Addiction',
-    'Abuse',
-    'Mental Disorder',
-    'Alternative Treatment',
-  ];
+  // final values = [
+  //   'LGBTQ',
+  //   'Religion',
+  //   'Youth Services',
+  //   'Addiction',
+  //   'Abuse',
+  //   'Mental Disorder',
+  //   'Alternative Treatment',
+  // ];
 
   @override
   Widget build(BuildContext context) {
+    final values = Value.values.map((x) => valToString(x));
+
+    // for demo
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -226,16 +278,39 @@ class ValuesTab extends StatelessWidget {
               PromptText(
                   'I would prefer if my doctor has experience with or values...'),
               Wrap(
-                children: values.map((item) {
+                children: values.map((
+                  item,
+                ) {
+                  Color? col;
+
+                  switch (item) {
+                    case 'LGBTQ':
+                    case 'Mental Disorder':
+                    case 'Depression':
+                      col = kMaxBlueGreenColour;
+                      break;
+                    default:
+                      break;
+                  }
                   return Container(
                     margin: EdgeInsets.only(left: 7.0),
                     child: Chip(
                       label: Text(item),
+                      backgroundColor: col == null
+                          ? kMiddleBlueGreenColour
+                          : kMaxBlueGreenColour,
                     ),
                   );
                 }).toList(),
               ),
-              Image.asset('assets/images/pinpan.png')
+              Container(
+                height: 260,
+                child: Image.asset('assets/images/pinpan.png'),
+              ),
+              NormalButton(
+                buttonText: 'Done',
+                onClickFunc: () => {Navigator.pushNamed(context, '/feed')},
+              ),
             ],
           ),
         ),

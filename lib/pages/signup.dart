@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sampleapp/backend/data_manager.dart';
+import 'package:sampleapp/utils/dataStore.dart';
 import '../components/normalbutton.dart';
 import '../components/crisisbutton.dart';
 
@@ -40,9 +42,10 @@ class SignupScreen extends StatelessWidget {
                   margin: const EdgeInsets.only(top: 75.0),
                   child: NormalButton(
                       buttonText: 'Signup',
-                      onClickFunc: () => {
-                            Navigator.pushNamed(context, '/prefs'),
-                          }))
+                      onClickFunc: () {
+                        loggedInUser = DataManager.instance.getUserData();
+                        Navigator.pushNamed(context, '/prefs');
+                      }))
             ],
           )),
       floatingActionButton: CrisisButton(

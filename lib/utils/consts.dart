@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-const TextStyle c_PromptText = TextStyle(
+final TextStyle kPromptText = TextStyle(
+  fontFamily: GoogleFonts.roboto().fontFamily,
   fontSize: 25,
 );
 

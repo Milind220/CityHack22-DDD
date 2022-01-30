@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sampleapp/backend/data_manager.dart';
+import 'package:sampleapp/backend/recommendation_system.dart';
 import 'package:sampleapp/utils/consts.dart';
+import 'package:sampleapp/utils/dataStore.dart';
 import '../components/crisisbutton.dart';
 import '../components/doctorlisttile.dart';
 import '../constants.dart';
@@ -9,6 +12,15 @@ class MainFeedScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> doctorpics = [
+      'assets/images/Doc1.jpeg',
+      'assets/images/Doc2.jpeg',
+      'assets/images/Doc3.jpeg',
+      'assets/images/Doc4.jpeg',
+      'assets/images/Doc5.jpeg',
+      'assets/images/ladypic.jpg'
+    ];
+
     return Scaffold(
       body: ListView(
         children: [
@@ -51,31 +63,51 @@ class MainFeedScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       GestureDetector(
-                        child: DoctorListTile(),
+                        child: DoctorListTile(
+                          docName: 'Dr. Mike Chambers',
+                          docBlurb: 'Psychiatrist; Oxford',
+                          picPath: doctorpics[0],
+                        ),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(),
+                        child: DoctorListTile(
+                          docName: 'Dr. Frederick Knowles',
+                          docBlurb: 'Psychiatrist; Cambridge',
+                          picPath: doctorpics[1],
+                        ),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(),
+                        child: DoctorListTile(
+                          docName: 'Dr. Bharad Rajosh',
+                          docBlurb: 'Psychiatrist; HKU',
+                          picPath: doctorpics[2],
+                        ),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(),
+                        child: DoctorListTile(
+                          docName: 'Dr. Gimmie Zimmerwoman',
+                          docBlurb: 'Psychiatrist; CUHK',
+                          picPath: doctorpics[3],
+                        ),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },
                       ),
                       GestureDetector(
-                        child: DoctorListTile(),
+                        child: DoctorListTile(
+                          docName: 'Dr. Leo Fridjeoff',
+                          docBlurb: 'Psychiatrist; NUST',
+                          picPath: doctorpics[4],
+                        ),
                         onTap: () => {
                           Navigator.pushNamed(context, '/docprofile'),
                         },

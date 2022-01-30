@@ -4,7 +4,13 @@ import '../components/pillcomponent.dart';
 import '../constants.dart';
 
 class DoctorListTile extends StatelessWidget {
-  const DoctorListTile({Key? key}) : super(key: key);
+  //const DoctorListTile({Key? key}) : super(key: key);
+
+  final String docName;
+  final String docBlurb;
+  final String picPath;
+  DoctorListTile(
+      {required this.docName, required this.docBlurb, required this.picPath});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +35,11 @@ class DoctorListTile extends StatelessWidget {
           //mainAxisAlignment: MainAxisAlignment.center,
           //crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            NameArea(),
+            NameArea(
+              docName: docName,
+              docBlurb: docBlurb,
+              picPath: picPath,
+            ),
             PillArea(),
           ],
         ),
@@ -39,7 +49,12 @@ class DoctorListTile extends StatelessWidget {
 }
 
 class NameArea extends StatelessWidget {
-  const NameArea({Key? key}) : super(key: key);
+  //const NameArea({Key? key}) : super(key: key);
+  final String docName;
+  final String docBlurb;
+  final String picPath;
+  NameArea(
+      {required this.docName, required this.docBlurb, required this.picPath});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +66,7 @@ class NameArea extends StatelessWidget {
           Container(
               margin: EdgeInsets.only(left: 5),
               width: 100,
-              child: Image.asset('assets/images/ladypic.jpg')
+              child: Image.asset(picPath)
               //const Icon(Icons.account_box_sharp),
               ),
           Column(
@@ -59,8 +74,8 @@ class NameArea extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(10),
                 child: Text(
-                  'Doc Name',
-                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  docName,
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                 ),
               ),
               Container(
@@ -68,7 +83,7 @@ class NameArea extends StatelessWidget {
                 height: 90,
                 width: 200,
                 child: Text(
-                  'Doc Blurb kwafnio ofihwqe qf 9uw 9qu we-0fw90 w- w-0qiwfou09wu 09w9u wf-uwfq 09wfq-0',
+                  docBlurb,
                   style: TextStyle(
                     fontSize: 14,
                   ),
