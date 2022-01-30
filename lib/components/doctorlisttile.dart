@@ -67,7 +67,7 @@ class NameArea extends StatelessWidget {
                 padding: EdgeInsets.all(10),
                 child: Text(
                   docName,
-                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                 ),
               ),
               Container(

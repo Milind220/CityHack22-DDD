@@ -7,9 +7,6 @@ import 'package:sampleapp/routes.dart';
 
 // Import the firebase_core plugin
 import 'package:firebase_core/firebase_core.dart';
-
-import 'backend/data_manager.dart';
-import 'utils/dataStore.dart';
 //hello im Mike
 //Chamberlin is better than Mike
 
@@ -54,7 +51,6 @@ class _AppState extends State<App> {
 
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
-            debugShowCheckedModeBanner: false,
             routes: appRoutes,
             initialRoute: '/',
           );
