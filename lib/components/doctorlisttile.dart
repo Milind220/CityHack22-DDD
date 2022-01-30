@@ -7,8 +7,10 @@ class DoctorListTile extends StatelessWidget {
   //const DoctorListTile({Key? key}) : super(key: key);
 
   final String docName;
-  //final String docBlurb;
-  DoctorListTile({required this.docName});
+  final String docBlurb;
+  final String picPath;
+  DoctorListTile(
+      {required this.docName, required this.docBlurb, required this.picPath});
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +37,8 @@ class DoctorListTile extends StatelessWidget {
           children: [
             NameArea(
               docName: docName,
+              docBlurb: docBlurb,
+              picPath: picPath,
             ),
             PillArea(),
           ],
@@ -47,7 +51,10 @@ class DoctorListTile extends StatelessWidget {
 class NameArea extends StatelessWidget {
   //const NameArea({Key? key}) : super(key: key);
   final String docName;
-  NameArea({required this.docName});
+  final String docBlurb;
+  final String picPath;
+  NameArea(
+      {required this.docName, required this.docBlurb, required this.picPath});
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +66,7 @@ class NameArea extends StatelessWidget {
           Container(
               margin: EdgeInsets.only(left: 5),
               width: 100,
-              child: Image.asset('assets/images/ladypic.jpg')
+              child: Image.asset(picPath)
               //const Icon(Icons.account_box_sharp),
               ),
           Column(
@@ -76,7 +83,7 @@ class NameArea extends StatelessWidget {
                 height: 90,
                 width: 200,
                 child: Text(
-                  'Doc Blurb kwafnio ofihwqe qf 9uw 9qu we-0fw90 w- w-0qiwfou09wu 09w9u wf-uwfq 09wfq-0',
+                  docBlurb,
                   style: TextStyle(
                     fontSize: 14,
                   ),
